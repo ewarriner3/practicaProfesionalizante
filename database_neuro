@@ -1,0 +1,127 @@
+/* --  SQL: Structured Query Language
+Lenguaje estructurado de consultas
+
+INSTRUCCION SQL: COMANDO + CLAUSULA + OPERADORES + FUNCIONES
+
+Diferenciar los 2 lenguajes
+1- DDL: Data Definition Language: llevar a cabo las tareas de definicion de las estructuras que almacenaran los datos asi como de los procedimientos o funciones que permiten consultarlos. Las bases de datos almacenan datos mediante registros. Es necesario conocer la naturaleza de los distintos tipos de datos: numericos, fechas, texto, texto extendido, booleanos (true/false, 0/1), etc. 
+Comandos:
+- create
+- drop
+- alter
+- truncate
+
+2- DML: Data Manipulation Language
+
+Comandos:
+- select
+- insert
+- update
+- delete
+
+Clausulas:
+- from: especifica la tabla de la que se quieren obtener los registros
+- where: especifica las condiciones o criterios de los registros seleccionados
+- join: combina filas de dos o más tablas basadas en una columna relacionada entre ellas
+    - inner join: devuelve filas cuando hay una coincidencia en ambas tablas (seria como un AND)
+    - left join: devuelve todas las filas de la tabla izquierda y las filas coincidentes de la tabla derecha
+    - right join: devuelve todas las filas de la tabla derecha y las filas coincidentes de la tabla izquierda
+    - full join: devuelve filas cuando hay una coincidencia en una de las tablas (seria como un OR)
+- group by: 
+- having
+- order by
+
+3- DCL: Data Control Language: controla el acceso a los objetos y los datos.
+Comandos:
+- grant
+- revoke
+
+4- TCL: Transaction Control Language
+Comandos:
+- commit
+- rollback
+- savepoint
+
+OPERADORES:
+<
+>
+=
+<=
+>=
+<>
+BETWEEN
+LIKE: utilizado con caracteres comodin (? y *)
+IN: para especificar registros en un campo en concreto
+AND
+OR
+NOT
+IS NULL
+IS NOT NULL
+
+FUNCIONES:
+- COUNT(): cuenta el numero de filas que coinciden con un criterio especifico
+- SUM(): suma los valores de una columna numerica
+- AVG(): calcula el valor promedio de una columna numerica
+- MIN(): devuelve el valor minimo de una columna
+- MAX(): devuelve el valor maximo de una columna
+- UPPER(): convierte una cadena de texto a mayusculas
+- LOWER(): convierte una cadena de texto a minusculas
+- LENGTH(): devuelve la longitud de una cadena de texto
+- NOW(): devuelve la fecha y hora actual del sistema
+- ROUND(): redondea un numero a un numero especifico de decimales
+- CAST(): convierte un tipo de dato en otro
+- COALESCE(): devuelve el primer valor no nulo de una lista de expresiones
+- SUBSTRING(): extrae una subcadena de una cadena de texto
+- TRIM(): elimina los espacios en blanco al inicio y al final de una cadena de texto
+- CONCAT(): concatena dos o mas cadenas de texto
+- DATEPART(): extrae una parte especifica de una fecha (como el año, mes o dia)
+- DATEDIFF(): calcula la diferencia entre dos fechas en una unidad especifica (como dias, meses o años)
+- NOW(): devuelve la fecha y hora actual del sistema
+- GETDATE(): devuelve la fecha y hora actual del sistema (SQL Server)
+- CURRENT_DATE: devuelve la fecha actual del sistema
+- CURRENT_TIME: devuelve la hora actual del sistema
+- EXTRACT(): extrae una parte especifica de una fecha (como el año, mes o dia)
+- RAND(): genera un numero aleatorio entre 0 y 1
+- ABS(): devuelve el valor absoluto de un numero
+- POWER(): eleva un numero a una potencia especifica
+- SQRT(): devuelve la raiz cuadrada de un numero
+- FLOOR(): redondea un numero hacia abajo al entero mas cercano
+- CEIL(): redondea un numero hacia arriba al entero mas cercano
+- MOD(): devuelve el resto de la division entre dos numeros
+- NOW(): devuelve la fecha y hora actual del sistema
+- CURRENT_TIMESTAMP: devuelve la fecha y hora actual del sistema
+- SESSION_USER: devuelve el nombre del usuario actual de la sesion
+- USER: devuelve el nombre del usuario actual de la sesion
+- VERSION(): devuelve la version del sistema de gestion de bases de datos
+- DATABASE(): devuelve el nombre de la base de datos actual
+- TABLE(): devuelve el nombre de la tabla actual
+- COLUMN(): devuelve el nombre de la columna actual
+- IFNULL(): devuelve un valor especifico si una expresion es nula
+- NULLIF(): devuelve nulo si dos expresiones son iguales
+- CASE: permite realizar una serie de condiciones y devolver un valor diferente para cada una de ellas
+- CAST(): convierte un tipo de dato en otro
+- CONVERT(): convierte un tipo de dato en otro (SQL Server)
+- COALESCE(): devuelve el primer valor no nulo de una lista de expresiones
+- SUBSTRING(): extrae una subcadena de una cadena de texto
+- TRIM(): elimina los espacios en blanco al inicio y al final de una cadena de texto
+
+Otros:
+Consulta: Query
+Tabla: table
+campo: field
+valor de campo: field value
+registro: record
+identifiers: ID
+*/
+
+select nos permite seleccionar algo
+* seria TODO
+
+ejemplo: select * from users;
+
+falta de congruencia: siempre poner todo en el mismo idioma
+
+insert into usuarios (nombre,apellido,edad);
+esto mete en la tabla usuarios nombre apellido y edad
+values ('Lucas','Perez',30);
+
