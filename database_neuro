@@ -11,7 +11,11 @@ Comandos:
 - alter
 - truncate
 
-2- DML: Data Manipulation Language
+2- DML: Data Manipulation Language: permite a los usuarios llevar a cabo las tareas de consulta o modificacion de los datos contenidos en dicha base de datos. Las bases de datos relacionadas al estar basadas en teorias de conjuntos, es posible realzar las diferentes operaciones matematicas. Es por imtante comprender que los conjuntos a operar deben ser compatibles, es decir, poseer los mismos campos.
+Operaciones de conjuntos:
+- consultas agrupadas: gran utilidad: manipulan los grupos usando las denomadas funciones de agregacion (maximo MAX, minimo MIN, contar COUNT, promedio AVG)
+- consultas ordenadas: permiten ordenar los registros segun uno o varios campos
+- consultas con subconsultas: una consulta dentro de otra consulta
 
 Comandos:
 - select
@@ -27,9 +31,10 @@ Clausulas:
     - left join: devuelve todas las filas de la tabla izquierda y las filas coincidentes de la tabla derecha
     - right join: devuelve todas las filas de la tabla derecha y las filas coincidentes de la tabla izquierda
     - full join: devuelve filas cuando hay una coincidencia en una de las tablas (seria como un OR)
-- group by: 
-- having
-- order by
+- group by: para agrupar los registros seleccionados en funcion de un campo
+- having: especifica las condiciones o criterios que deben cumplir los grupos
+- order by: ordena los registros seleccionados en funcion de un campo
+- limit: limita el numero de registros devueltos por una consulta
 
 3- DCL: Data Control Language: controla el acceso a los objetos y los datos.
 Comandos:
@@ -108,20 +113,12 @@ FUNCIONES:
 Otros:
 Consulta: Query
 Tabla: table
-campo: field
+campo (field): el campo es el nombre entero de la columna
+valor de campo (field value): es el valor especifico dentro de una columna en una fila determinada
 valor de campo: field value
-registro: record
+registro (record): es la fila completa
 identifiers: ID
+
 */
 
-select nos permite seleccionar algo
-* seria TODO
-
-ejemplo: select * from users;
-
-falta de congruencia: siempre poner todo en el mismo idioma
-
-insert into usuarios (nombre,apellido,edad);
-esto mete en la tabla usuarios nombre apellido y edad
-values ('Lucas','Perez',30);
-
+database name = neuroOncology
