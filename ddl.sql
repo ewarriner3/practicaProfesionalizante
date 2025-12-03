@@ -359,3 +359,33 @@ END;
 /* fin codigo base
 */
 
+
+/* eric te quedaste aca
+estabas tratando de hacer la tablal obrasocial para agregar nombre telefono plan numero de cobertura etc y unirla a la tabla pacientes por medio de una PK que no sea la obra social sino que sea un id autoincremental nuevo, y además poner el "nombre" de obra social ciertas variables constantes
+
+despues también hay que agregar en la tabla medicodecabecera el telefono, matricula, etc
+
+*/
+
+CREAT TABLE IF NOT EXISTS public.obrasocial
+(
+    protocolopatologia_pk character varying COLLATE pg_catalog."default" NOT NULL,
+    hc_fk character varying COLLATE pg_catalog."default",
+    idenfermedad_fk integer,
+    dateon date,
+    primerdiagnostico boolean,
+    recaida boolean,
+    progresion boolean,
+    segundaenfermedadmaligna boolean,
+    biopsia boolean,
+    cirugia cirugia_enum,
+    fechacirugia date,
+    estadificacionchang estadificacionchang_enum,
+    riesgo riesgo_enum,
+    riesgomotivo riesgomotivo_enum,
+    localizacion localizacion_enum,
+    localizaciontext text COLLATE pg_catalog."default",
+    idmolecular_fk integer,
+    idtratamiento_fk integer,
+    CONSTRAINT diagnostico_pkey PRIMARY KEY (protocolopatologia_pk)
+);
