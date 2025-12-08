@@ -1,35 +1,4 @@
-select nos permite seleccionar algo
-* seria TODO
-
-ejemplo: select * from users;
-
-/*
-falta de congruencia: siempre poner todo en el mismo idioma
-*/
-
-insert into usuarios (nombre,apellido,edad);
-esto mete en la tabla usuarios nombre apellido y edad
-values ('Lucas','Perez',30);
-
-/* TEXTO siempre meterlos entre comillas, los numeros no hace falta
-select siempre devuelve tablas
-las entidades se almacenan en tablas
-*/
-
-******************************
-
-/*
-para insertar datos en una tabla
-*/
-
-intert into nombreDeTabla (columna1, columna2, columna3)
-values ('valor1', 'valor2', 'valor3');
-
-/*
-si es integer no hace falta comillas
-*/
-
-insert into provincia (idprovincia, provincia)
+insert into provincia (idprovincia, provincia),
 values (1, 'Buenos Aires'),
        (2, 'Catamarca'),
        (3, 'Chaco'),
@@ -56,9 +25,7 @@ values (1, 'Buenos Aires'),
        (24, 'Tucuman'),
        (25, 'Extranjero');
 
-/*
-**************
-*/
+
 
 insert into smegenetico (idsmegenetico_pk, smegenetico)
 values (1, 'no'),
@@ -89,9 +56,7 @@ UPDATE smegenetico SET tecnica = 'RT-PCR', fecha = '2023-11-11' WHERE idsmegenet
 UPDATE smegenetico SET tecnica = 'MLPA', fecha = '2023-12-05' WHERE idsmegenetico_pk = 12;
 UPDATE smegenetico SET tecnica = 'Sanger', fecha = '2024-01-09' WHERE idsmegenetico_pk = 13;
 
-/*
-**************
-*/
+
 
 insert into medicocabecera (idmedicocabecera_pk, medico)
 values (1, 'daniel alderete'),
@@ -102,9 +67,7 @@ values (1, 'daniel alderete'),
        (6, 'mailes rios'),
        (7, 'ocd');
 
-/*
-**************
-*/
+
 
 insert into pacientes (hc_pk, apellido, nombre, fechanacimiento, derivado, provincia_fk, smegenetico_fk, medicocabecera_fk)
 values ('a83995', 'nana', 'pepe', '13/08/1988', 'no', 2, 1, 4),
