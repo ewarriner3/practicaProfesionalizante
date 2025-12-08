@@ -1,16 +1,25 @@
+-- 7 de diciembre 2025 update
+
 create view vista_general as
  SELECT p.hc_pk AS historia_clinica,
     p.apellido,
     p.nombre,
     p.fechanacimiento AS fecha_nacimiento,
     p.derivado,
-    p.obrasocial,
+    os.nombre_os AS obra_social,
+    os.plan AS plan_obrasocial,
+    os.numero_cobertura,
     pp.provincia,
+    pp.partido,
+    pp.ciudad,
     sg.smegenetico AS sindrome_genetico,
+    sg.tecnica,
+    sg.fecha,
     m.medico AS medico_cabecera,
     d.dateon AS fecha_diagnostico,
     age(d.dateon::timestamp with time zone, p.fechanacimiento::timestamp with time zone) AS edad_diagnostico,
-    e.tumor AS diagnostico,
+    e.tumor AS diagnostico_histologico,
+    e.who_grade,
     d.cirugia AS tipo_de_cirugia,
     d.fechacirugia AS fecha_de_cirugia,
     d.localizacion AS localizacion_del_tumor,
@@ -36,11 +45,8 @@ FROM pacientes p
      JOIN smegenetico sg ON p.smegenetico_fk = sg.idsmegenetico_pk
      JOIN medicocabecera m ON p.medicocabecera_fk = m.idmedicocabecera_pk
      JOIN followup f ON p.idfollowup_fk = f.idfollowup_pk
+     JOIN obrasocial os ON p.idobrasocial_fk = os.idobrasocial_pk
      JOIN diagnostico d ON p.hc_pk::text = d.hc_fk::text
      JOIN enfermedad e ON d.idenfermedad_fk = e.idenfermedad_pk
      JOIN molecular ml ON d.idmolecular_fk = ml.idmolecular_pk
-     JOIN tratamiento t ON d.idtratamiento_fk = t.idtratamiento_pk
-
-
-***********
-
+     JOIN tratamiento t ON d.idtratamiento_fk = t.idtratamiento_pk;
